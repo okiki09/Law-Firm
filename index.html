@@ -1,0 +1,1223 @@
+<! DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Justice Law Firm </title>
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+.lawyer-template{
+   font-family:'Georgia', 'Times New Roman',serif;
+   line-height: 1.6;
+   color:#333;
+}
+
+.container{
+	max-width:1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.btn{
+  padding:12px 24px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family:'Georgia',serif;
+}
+
+.btn-primary{
+   background: linear-gradient(135deg, #8B7355, #A52A2A);
+    color:white;
+	margin-right:1rem;
+}
+
+.btn-primary:hover{
+   transform: translateY(-2px);
+   box-shadow: 0 5px 15px rgba(139,115,85,0.4);
+}
+
+.btn-secondary{
+   background:transparent;
+   color:#8B7355;
+   border: 2px solid #8B7355;
+ }
+
+.btn-secondary:hover{
+   background: #8B7355;
+   color:white;
+ }
+
+.btn-outline{
+   background:transparent;
+   color:#8B7355;
+   border:2px solid #8B7355;
+   padding:8px 16px;
+ }
+
+.btn-outline:hover{
+   background:#8B7355;
+   color:white;
+ } 
+
+.btn-sm{
+   padding: 8px 16px;
+   font-size: 0.9rem;
+}
+
+.top-bar{
+   background: #2C3E50;
+   color:white;
+   padding:8px 0;
+   font-size:0.9rem;
+  }
+
+.top-bar-content{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+} 
+
+.contact-info span{
+  margin-right:20px;
+}
+ 
+.navbar{
+   background:white;
+   box-shadow:0 2px 10px rgba(0,0,0,0.1);
+   position:sticky;
+   top:0;
+   z-index:1000;
+}
+
+.nav-content{
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 0;
+}
+
+.logo{
+   display:flex;
+   align-items:center;
+   gap:1rem;
+}
+
+.logo-icon{
+  font-size:2.5rem;
+}
+
+.logo-text h2{
+    color:#8B7355;
+	margin:0;
+	font-size:1.5rem;
+}
+
+.logo-text p{
+   color:#666;
+   margin:0;
+   font-size:0.9rem;
+}
+
+.nav-menu{
+   display:flex;
+   list-style:none;
+   gap:2rem;
+   margin:0;
+   padding:0;
+}
+
+.nav-menu a{
+   text-decoration: none;
+   color: #2C3E50;
+   font-weight:500;
+   transition: color 0.3s ease;
+   font-family:'Georgia',serif;
+}
+
+.nav-menu a:hover{
+   color: #8B7355;
+}
+
+.hero{
+   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+   padding: 4rem 0;
+}
+
+.hero-content{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:4rem;
+   align-items:center;
+}
+
+.hero-text h1{
+   font-size:3rem;
+   margin-bottom:1rem;
+   color:#2C3E50;
+   line-height:1.2;
+   font-weight:bold;
+}
+
+.hero-text p{
+   font-size:1.2rem;
+   color: #666;
+   margin-bottom:2rem;
+   line-height:1.8;
+}
+
+.hero-buttons{
+   display:flex;
+   gap;1rem;
+   margin-bottom:2rem;
+}
+
+.hero-features{
+   display:flex;
+   flex-direction:column;
+   gap:0.5rem;
+}
+
+.feature{
+   display:flex;
+   align-items:center;
+   gap:0.5rem;
+   color:#2C3E50;
+}
+
+.feature-icon{
+   font-size:2.2rem;
+}
+
+.hero-image img{
+   width:100%;
+   height:500px;
+   object-fit:cover;
+   border-radius:10px;
+   box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.practice-areas{
+    padding:5rem 0;
+	background:white;
+}
+
+.section-title{
+   font-size:2.5rem;
+   margin-bottom:1rem;
+   color:#2C3E50;
+   text-align:center;
+   font-weight:bold;
+
+}
+
+.section-subtitle{
+   text-align:center;
+   color:#666;
+   margin-bottom:3rem;
+   font-size: 1.1rem;
+}
+
+.practice-grid{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+   gap:2rem;
+}
+
+.practice-card{
+   background:white;
+   padding:2rem;
+   border-radius:10px;
+   text-align:center;
+   box-shadow:0.5px 15px rgba(0,0,0,0.1);
+   transition:transform 0.3s ease;
+   border:1px solid #e9ecef;
+ }
+
+.practice-card:hover{
+   transform:translateY(-10px);
+}
+
+.practice-icon{
+   font-size:3rem;
+   margin-bottom:1rem;
+}
+
+.practice-card h3{
+    color:#2C3E50;
+	margin-bottom:1rem;
+	font-size:1.5rem;
+
+}
+
+.practice-card p{
+   color:#666;
+   margin-bottom:1.5rem;
+   line-height:1.6;
+
+}
+
+.about{
+   padding:5rem 0;
+   background:#f8f9fa;
+}
+
+.about-content{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:4rem;
+   align-items:center;
+
+}
+
+.about-text p{
+   font-size:1.1rem;
+   color:#666;
+   margin-bottom:2rem;
+   line-height:1.8;
+ }
+
+.stats-grid{
+   display:grid;
+   grid-template-columns:repeat(2,1fr);
+   gap:2rem;
+   margin:2rem 0;
+}
+
+.stat{
+   text-align:center;
+   padding:1.5rem;
+   background:white;
+   border-radius:10px;
+   box-shadow:0 3px 3px rgba(0,0,0,0.1);
+}
+
+.stat h3{
+   font-size:2.5rem;
+   color:#8B7355;
+   margin-bottom:0.5rem;
+   font-family:'Georgia',serif;
+ }
+
+.stat p{
+   color:#666;
+   margin:0;
+   font-weight:500;
+
+} 
+
+.features-list{
+   display:flex;
+   flex-direction:column;
+   gap: 1.5rem;
+ }
+
+.feature-item{
+    display:flex;
+	gap:1rem;
+	align-items:flex-start;
+}
+
+.feature-icon{
+   font-size:2rem;
+   flex-shrink:0;
+} 
+
+.feature-item h4{
+   margin:0 0 0.5rem 0;
+   color:2C3E50;
+}
+
+.feature-items p{
+   margin:0;
+   color:#666;
+   font-size:1rem;
+}
+
+.image img{
+   width:100%;
+   height:500px;
+   object-fit:cover;
+   border-radius:10px;
+   box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.attorneys{
+   padding:5rem 0;
+   background:white;
+}
+
+.attorneys-grid{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(350px, 1fr));
+   gap:2rem;
+}
+
+.attorney-card{
+   background:white;
+   border-radius:10px;
+   overflow:hidden;
+   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+   transition:transform 0.3s ease;
+}
+
+.attorney-card:hover{
+   transform:translateY(-5px);
+}
+
+.attorney-image{
+   height:300px;
+   overflow:hidden;
+}
+
+.attorney-image img{
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   transition:transform 0.3s ease;
+}
+
+.attorney-card:hover .attorney-image img{
+     transform:scale(1.1);
+}
+
+.attorney-info{
+   padding:2rem;
+}
+
+
+.attorney-info h3{
+   color:#2C3E50;
+   margin-bottom:0.5rem;
+   font-size:1.5rem;
+ }  
+
+
+.specialty{
+   color:#8B7355;
+   font-weight:500;
+   margin-bottom:1rem;
+   font-style:italic;
+}
+
+.bio{
+   color:#666;
+   margin-bottom:1.5rem;
+   line-height:1.6;
+}
+
+.attorney-contact{
+   display:flex;
+   flex-direction:column;
+   gap:0.5rem;
+   color:#666;
+   font-size:0.9rem;
+   font-family:'Georgia',serif;
+}
+
+.case-results{
+   padding:5rem 0;
+   background:linear-gradient(135deg, #2C3E50, #34495E);
+   color:white;
+}
+
+.results-grid{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+   gap:2rem;
+}
+
+.result-card{
+   background:rgba(255,255,255,0.1);
+   padding:2rem;
+   border-radius:10px;
+   text-align:center;
+   backdrop-filter:blur(10px);
+   border:1px solid rgba(255,255,255,255,0.2);
+ }
+
+.result-card h3{
+   font-size:2rem;
+   margin-bottom:0.5rem;
+   color:#8B7355;
+
+}
+
+.result-card p{
+   margin-bottom:1rem;
+   font-size:1.1rem;
+   opacity:0.9;
+}
+
+.case-type{
+   background:#8B7355;
+   color:white;
+   padding:4px 12px;
+   border-radius:20px;
+   font-size:0.8rem;
+   font-weight:500;
+}
+
+.testimonials{
+   padding::5rem 0;
+   background:#f8f9fa;
+}
+
+.testimonials-grid{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+   gap:2rem;
+ }
+
+.testimonial-card{
+   background:white;
+   padding:2rem;
+   border-radius:10px;
+   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+   border-left:4px solid #8B7355;
+}
+
+.stars{
+   color:#FFD700;
+   margin-bottom:1rem;
+   font-size:1.2rem;
+}
+
+.testimonial-content p{
+   color:#666;
+   font-style:italic;
+   line-height:1.6;
+   margin-bottom:1.5rem;
+}
+
+.client-info strong{
+   color:#2C3E50;
+   display:block;   
+}
+
+.client-info span{
+   color:#8B7355;
+   font-size:0.9rem;
+}
+
+.consultation-cta{
+   padding:4rem 0;
+   margin-top:1rem;
+   background:linear-gradient(135deg, #8B7355, #A52A2A);
+   color:white;
+   text-align:center;
+}
+
+.cta-content h2{
+   font-size:2.5rem;
+   margin-bottom:1rem;
+}
+
+.cta-content{
+   font-size:1.2rem;
+   margin-bottom:2rem;
+   opacity:0.9;
+   max-width:600px;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+.cta-buttons{
+   display:flex;
+   gap:1rem;
+   justify-content:center;
+}
+
+.contact{
+   padding:5rem 0;
+   background:white;
+}
+
+.contact-grid{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:4rem;
+}
+
+.contact-info h2{
+   font-size:2.5rem;
+   margin-bottom:1rem;
+   color:#2C3E50;
+}
+
+contact-info p{
+   color:#666;
+   margin-bottom:2rem;
+   font-size:1.1rem;
+   line-height:1.8;
+}
+
+.contact-details{
+   display:flex;
+   flex-direction:column;
+   gap:1.5rem;
+}
+
+.contact-item{
+   padding:1.5rem;
+   background:#f8f9fa;
+   border-radius:5px;
+   border-left:4px solid #8B7355;
+   font-family:'Georgia',serif;
+}
+
+.contact-item strong{
+   color:2C3E50;
+   display:block;
+   margin-bottom:0.5rem;
+}
+
+.contact-item p{
+   margin:0;
+   color:#666;
+   line-height:1.6;
+}
+
+.form{
+   background:#f8f9fa;
+   padding:2rem;
+   border-radius:10px;
+}
+
+.form h3{
+   color:#2C3E50;
+   margin-bottom:1.5rem;
+   text-align:center;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+
+.form input,
+.form select,
+.form textarea{
+   padding:12px 16px;
+   border:1px solid #e2e8f0;
+   border-radius:5px;
+   font-size:1rem;
+   transition:border-color 0.3s ease;
+   font-family:'Georgia',serif;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus{
+   outline:none;
+   border-color:#8B7355;
+}
+
+.footer{
+   background:#2C3E50;
+   color:white;
+   padding:3rem 0 1rem;
+
+}
+
+.footer-content{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+   gap:2rem;
+   margin-bottom:2rem;
+}
+
+.footer-section h3,
+.footer-section h4{
+   margin-bottom:1rem;
+   color:#8B7355;
+}
+
+.footer-section ul{
+   list-style:none;
+   padding:0;
+}
+
+.footer-section ul li{
+   margin-bottom:0.5rem;
+}
+
+.footer-section a{
+   color:#bdc3c7;
+   text-decoration:none;
+   transition:color 0.3s ease;
+}   
+
+.footer-section a:hover{
+    color:white;
+}
+
+.social-links{
+   display:flex;
+   gap:1rem;
+   margin-bottom:1rem;
+}
+
+.award p{	
+    0.5rem 0;
+	color:#bdc3c7;
+	font-size:0.9rem;
+}
+
+.bottom{
+   text-align:center;
+   padding-top:2rem;
+   border-top:1px solid #34495E;
+   color:#bdc3c7;
+   font-size:0.9rem;
+}
+
+.bottom a{
+   color:#8B7355;
+   text-decoration:none;
+}
+
+.bottom a:hover{
+   text-decoration:underline;
+}
+
+@media(max-width:768px){
+   .hero-content{
+     grid-template-columns:1fr;
+	 text-align:center;
+}
+
+.hero-text h1{
+   font-size:2rem;
+}
+
+.about-content{
+   grid-template-columns:1fr;
+}
+
+.contact-grid{
+   grid-template-columns:1fr;
+}
+
+.nav-content{
+   flex-direction:column;
+   gap:1rem;
+}
+
+.nav-menu{
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.top-bar-content{
+   flex-direction:column;
+   gap:0.5rem;
+   text-align:center;
+ }
+
+.cta-buttons{
+  flex-direction:column;
+  align-items:center;
+ }
+ 
+ .form-row{
+   grid-template-columns:1fr;
+}
+
+.stats-grid{
+   grid-template-columns:1fr;
+ }
+} 
+   
+
+
+</style> 
+</head>
+<body>
+<div class="lawyer-template">
+   <!--Header -->
+   <header class="header">
+     <div class="top-bar">
+	  <div class="container">
+	   <div class="top-bar-content">
+	    <div class="contact-info">
+		 <span>📞 (555) 123-4567</span>
+		 <span>📧 contact@justicefirm.com </span>
+		 <span>🕓 Mon-Fri:9:00AM - 6:00 PM </span>
+		</div>
+		 <div id="currentDateTime"> </div>
+		<div class="top-actions">
+		  <button class="btn btn-sm">Free Consultation</button>
+          </div>
+         </div>
+		</div>
+		</div> 
+		
+		<nav class="navbar">
+		 <div class="container">
+		  <div class="nav-content">
+		   <div class="logo">
+		    <div class="logo-icon"> ⚖️ </div>
+			<div class="logo-text">
+			  <h2> Justice Law Firm </h2>
+			  <p>Professional Legal Services</p>
+			</div>
+		 </div> 
+		 
+		 <ul class="nav-menu">
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#about">About</a></li>
+		   <li><a href="#practice">Practice Areas</a></li>
+		   <li><a href="#attorneys">Attorneys</a></li>
+		   <li><a href="#testimonial">Testimonial</a></li>
+		   <li><a href="#contact">Contact</a></li>
+		   </ul>
+		   
+		   <div class="nav-actions">
+		   <button class="btn btn-primary">Schedule Consultation</button>
+		    </div>
+		  </div>
+		 </div>
+		 </nav>
+		</header>
+
+		  <section class="hero" id="home">
+		    <div class="container">
+		      <div class="hero-content">
+		       <div class="hero-text">
+		  <h1>Expert Legal Representation You Can Trust</h1>
+		  <p>With over 25 years of combined experience, our team of dedicated attorneys 
+		     provides comprehensive legal solutions tailored to your unique needs.
+			 Your justice is our priority. </p>
+			<div class="hero-buttons">
+             <button class="btn btn-primary">Free Case Evaluation</button>
+		      <button class="btn btn-secondary">Meet Our team </button>
+			  </div>
+			    <div class="hero-features">
+				 <div class="feature">
+                  <span class="feature-icon">✅</span>
+      				<span>Free Initial Consultation </span>
+					</div>
+			<div class="feature">
+			<span class="feature-icon">✅</span>
+			 <span>24/7 Client Support</span>
+			</div> 
+			<div class="feature">
+			 <span class="feature-icon">✅</span>
+			  <span>No Win, No Fee*</span>
+			 </div>
+			  </div>
+			   </div>
+			<div class="hero-image">
+			  <img src="images/law.jpg" alt="a law">
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+       <section class="practice-areas" id="practice">
+	      <div class="container">
+		    <h2 class="section-title">Our Practice Areas</h2>
+			<p class="section-subtitle">Comprehensive legal services across
+	multiple specialities</p>
+             <div class="practice-grid">
+			 <div class="practice-card">
+	         <div class="practice-icon">🏠</div>
+			 <h3>Real Estate Law</h3>
+			 <p>Property transactions,landlord-tenant disputes,zoning issues,
+			 and real estate litigation.</p>
+		<button class="btn btn-outline">Learn More</button>
+         </div>
+		 <div class="practice-card">
+		   <div class="practice-icon">👨‍👩‍👧‍👦</div>
+		   <h3>Family Law</h3>
+		   <p>Divorce, child custody,adoption,prenuptial agreements, and
+		 family mediation services.</p>
+		  <button class="btn btn-outline">Learn More</button>
+		  </div>
+		  <div class="practice-card">
+		   <div class="practice-icon">‍💼</div>
+		   <h3>Business Law</h3>
+		   <p>Corporate formation, contracts, mergers & acquisitions, and business litigation.</p>
+		  <button class="btn btn-outline">Learn More</button>
+		  </div>
+		  <div class="practice-card">
+		    <div class="practice-icon">🚗</div>
+			<h3>personal Injury</h3>
+			<p>Car accidents, slip and fall, medical malpractice, and wrongful death claims.</p>
+			<button class="btn btn-outline">Learn More</button>
+			</div>
+		<div class="practice-card">
+		  <div class="practice-icon">📝</div>
+		  <h3>Estate Planning</h3>
+		  <p>Wills, trusts, probate, power of attorney, and estate administration services.</p>
+		  <button class="btn btn-outline">Learn More</button>
+		  </div>
+		 <div class="practice-card">
+		 <div class="practice-icon">⚖️</div>
+		  <h3>Criminal Defense</h3>
+		  <p>DUI defense, drug charges, white-collar <br>crimes, and criminal appeals<br> representation.</p>
+		  <button class="btn btn-outline">Learn More</button>
+		  </div>
+		  </div>
+		  </div>
+		  </section>
+		
+		<section class="about" id="about">
+		  <div class="container">
+		   <div class="about-content">
+		    <div class="about-text">
+			 <h2>Why Choose Justice Law Firm?</h2>
+			 <p>Founded in 1998,Justice Law Firm has built a reputation for 
+		excellence,integrity,and successful outcomes.Our client-focused approach
+		ensures you receive personalized attention and strategic legal counsel.</P>
+		
+		   <div class="stats-grid">
+		    <div class="stat">
+			 <h3>500+</h3>
+			 <p>Cases Won</p>
+			</div>
+			<div class="stat">
+			 <h3>25+</h3>
+			<p>Years Rxperience</p>
+			</div>
+			<div class="stat">
+			<h3>98%</h3>
+			<p>Client Satisfaction</p>
+			</div>
+			<div class="stat">
+			<h3>50M+</h3>
+			<p>Recovered for Clients</p>
+			</div>
+			</div>
+
+
+           <div class="features-list">
+		    <div class="feature-item">
+			 <span class="feature-icon">🎯</span>
+			 <div>
+			   <h4>Strategic Approach</h4>
+			   <p>Customized legal strategies for each client's unique situation</p>
+			  </div> 
+            </div>
+			
+			
+			 <div class="feature-item">
+			  <span class="feature-icon">🤝</span>
+			  <div>
+                <h4>Personal Attention</h4>			  
+			    <p>Direct access to your attorney with regular case updates</p>
+				</div>
+			   </div>
+
+			  <div class="feature-item">
+			   <span class="feature-icon">💪</span>
+			     <div>
+				   <h4>Aggressive Representation</h4>
+				   <p>Fearless advocacy to protect your rights and interest</p>
+				   </div>
+				  </div>
+				</div>
+			   </div>
+               <div class="image">
+			     <img src="images/gavel.jpg" alt="a gavel">
+				</div>
+			  </div>
+			</div>
+		  </section>
+
+
+		   <section class="attorneys" id="attorneys">
+              <div class="container">
+			    <h2 class="section-title">Meet Our Attorneys</h2>
+				<p class="section-subtitle">Experienced legal professionals dedicated to your success</p>
+				  <div class="attorneys-grid">
+				    <div class="attorney-card">
+					  <div class="attorney-image">
+					   <img src="images/man1.jpg" alt="a man">
+					   </div>
+					    <div class="attorney-info">
+						  <h3>Sarah johnson,Esq.</h3>
+						  <p class="specialty">Senior Partner - Civil Ligitation </p>
+						 <p class="bio">Harvard Law graduate with 15 years of <br>
+					    experience in complex civil ligitation and appelliate practice.</p>
+                            <div class="attorney-contact">
+                               <span>📧sarah@justicefirm.com</span>
+							   <span>📞(555) 123-4568</span>
+						</div>
+					 </div>
+					</div> 
+					
+					<div class="attorney-card">
+					<div class="attorney-image">
+					<img src="images/man2.jpg" alt="a man">
+					</div>
+					
+				<div class="attorney-info">
+         		  <h3>Micheal Chen,Esq.</h3>
+				  <p class="specialty">partner - Corporate Law </p>
+				  <p class="bio">specializing in business formation,<br>contracts,and
+				  corporate governance with 12 <br> years of expertise.</p>
+				   <div class="attorney-contact">
+				   <span>📧micheal@justicefirm.com</span>
+				   <span>📞(555) 123-4569</span>
+				   </div>
+				 </div>
+			   </div>	 
+			   
+			   
+			   <div class="attorney-card">
+					<div class="attorney-image">
+					<img src="images/man3.jpg" alt="a man">
+					</div>
+					
+				<div class="attorney-info">
+         		  <h3>Robert Martinez,Esq.</h3>
+				  <p class="specialty">partner - Criminal Defense </p>
+				  <p class="bio">Former prosecutor with 18 years of <br>experiencein
+				  criminal defense and trial <br>advocacy.</p>
+				   <div class="attorney-contact">
+				   <span>📧robert@justicefirm.com</span>
+				   <span>📞(555) 123-4569</span>
+				   </div>
+				 </div>
+			   </div>
+			 </div>
+			</div>
+			</section>
+			
+
+       <section class="case-results">
+	     <div class="container">
+		   <h2 class="section-title">Recent Case Results</h2>
+		   <div class="results-grid">
+		     <div class="result-card">
+                <h3>$2.5 Million</h3>
+				<p>Medical Malpractice Settlement</p>
+				<span class="Case-type">Personal Injury</span>
+				</div>
+				<div class="result-card">
+				  <h3>Not Guilty</h3>
+				  <p>White-Collar Crime Defense</p>
+				  <span class="case-type">Criminal Defense</span>
+				  </div>
+				  <div class="result-card">
+				    <h3>$1.8 Million</h3>
+					<p>Business Contract Dispute</p>
+					<span class="case-type">Business Law</span>
+					</div>
+					<div class="result-card">
+					   <h3>Favorable Settlement</h3>
+					   <p>Complex Divorce Case</p>
+					   <span class="case-type">Family Law</span>
+					  </div>
+					</div>
+				  </div>
+				  </section>
+
+				  <section class="testimonials" id="testimonials">
+				     <div class="container">
+					   <h2 class="section-title">Client Testimonials</h2>
+					   <div class="testimonials-grid">
+	  				     <div class="testimonial-card">
+						   <div class="testimonial-content">
+						     <div class="stars">⭐⭐⭐⭐⭐</div>
+							 <p>"Justice Law Firm handled my personal injury case with
+							 exceptional professionalism. They secured a settlement that exceeded my
+							 expectations and were compassionate throughout the entire process."</p>
+							     </div>
+								 <div class="client-info">
+								   <strong>Jennifer Wilson</strong>
+								   <span>Personal Injury Client</span>
+								  </div>
+								 </div> 
+								 <div class="testimonial-card">
+								   <div class="testimonial-content">
+								     <div class="stars">⭐⭐⭐⭐⭐</div>
+									 <p>"As a small business owner,I needed reliable legal counsel.
+						  Micheal Chen provided expert guidance that helped us navigte complex
+						  contracts and avoid potential legal pitfalls."</p>
+						      </div>
+							  <div class="client-info">
+							    <strong>David Thompson</strong>
+								<span>Business Client</span>
+								</div>
+							   </div>
+							   <div class="testimonial-card"> 
+							     <div class="testimonial-content">
+								   <div class="stars">⭐⭐⭐⭐⭐</div>
+								   <p>"During the most difficult time of my life,Sarh johnson
+							provided not just legal expertise but genuine care and support.Her dedicaion
+							to my family law case was remarkable."</p>
+							     </div>
+					 <div class="client-info">
+					   <strong>Amanda Rodriquez</strong>
+					   <span>Family Law Client</span>
+					  </div>
+					</div>
+				   </div>
+				 </div>
+				</section> 
+			   
+			   
+		<section class="consultation-cta">
+		  <div class="container">
+		    <div class="cta-content">
+			  <h2>Ready to Discuss Your Case?</h2>
+			  <p>Contact us today for a free,no-obligation consultation. Let us
+			  help you understand your legal options and fight for the justice you deserve.</p>
+			  <div class="cta-buttons">
+			    <button class="btn btn-primary">Schedule Free Consultation</button>
+				<button class=" btn btn-secondary">Call Now:(555) 123-4567</button>
+				</div>
+			   </div>
+			 </div>
+			 </section>
+
+         <section class="contact" id="contact">
+		   <div class="container">
+		     <div class="contact-grid">
+			   <div class="contact-info">
+			     <h2>Get In Touch</h2>
+				 <p>Our office is conveniently located in downtown with easy
+				 access and parking. We're here to answer your questions and provide the Legal
+				 guidance you need.</p>
+				 
+				 <div class="contact-details">
+				   <div class="contact-item">
+				     <strong>Office Address</strong>
+					 <p>123 Justice Avenue<br>Suite 500<br>Legal District,LD 12345</p>
+					</div>
+					<div class="contact-item">
+					  <strong>Contact Information</strong>
+					    <p>Phone:(555) 123-4567<br>Email:
+						contact@justicelawfirm.com<br>Fax:(555) 123-4568</p>
+						</div>
+					<div class="contact-item">
+					  <strong>Office Hours</strong>
+					  <p>Monday - Friday:9:00AM - 6:00 PM<br>Saturday:By
+					  Appointment<br>Emergency:24/7 Available</p>
+					 </div>
+					</div>
+					</div>		
+		<div class="contact-form">
+       <form class="form">
+         <h3>Send Us a Message</h3>
+		 <div class="form-row">
+           <input type="text" placeholder="First Name" required>
+		   <input type="text" placeholder="Last Name" required>
+		 </div>  
+		 <div class="form-row">
+		    <input type="email" placeholder="Email Address" required>
+			<input type="number" placeholder="Phone Number" required>
+			</div>
+			<select required>
+			  <option value="">Select Practice Area</option>
+			  <option value="real-estate">Real Estate Law</option>
+			  <option value="family">Family Law</option>
+			  <option value="business">Business Law</option>
+			  <option value="personal-injury">Personal Injury</option>
+			  <option value="estate">Estate Planning</option>
+			  <option value="criminal">Criminal Defense</option>
+			  </select>
+			  <textarea placeholder="Briefly describe your legal issue..." rows="5" required></textarea>
+			  <button type="submit" class="btn btn-primary">Send Message</button>
+			</form>
+			</div>
+		  </div>
+		</div>
+	  </section>	
+		 
+		 
+	<footer class="footer">
+      <div class="container">
+       <div class="footer-content">
+	     <div class="footer-section">
+		  <div class="logo">
+		    <div class="logo-icon">⚖️</div>
+			<div class="logo-text">
+			  <h3>Justice Law Firm</h3>
+			  <p>Professional Legal Services</p>
+			 </div>
+			</div>
+			<p>Committed to providing exceptional legal representation With
+			integrity,expertise,and personalized attention to every client.</p>
+			</div>
+			
+			<div class="footer-section">
+			  <h4>Practice Areas</h4>
+			  <ul>
+			    <li><a href="#">Real Estate Law</a></li>
+				<li><a href="#">Family Law</a></li>
+				<li><a href="#">Business Law</a></li>
+				<li><a href="#">Personal Injury</a></i>
+			</ul>
+		  </div>
+
+		  <div class="footer-section">
+		    <h4>Quick Links</h4>
+			<ul>
+			  <li><a href="#">Home</a></li>
+			  <li><a href="#">About Us</a></li>
+			  <li><a href="#">Our Attorneys</a></li>
+			  <li><a href="#">Contact</a></li>
+			 </ul>
+			</div> 
+				
+		<div class="footer-section">
+           <h4>Connect With Us</h4>
+		   <div class="social-links">
+		     <a href="#">LinkedIn <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			 <a href="#">Facebook <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			 <a href="#">Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a>
+			 <a href="#">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a>
+		</div>
+	    <div class="award">
+          <p>🏆 AV Preeminent Rated</p>
+		  <p>⭐ Super Lawyers 2024</p>
+		  </div>
+		 </div>
+		</div>
+
+		<div class="bottom">
+		  <p>&copy;Dmt Mikro ai 2024 justice Law Firm. All rights reserved.|
+		 <a href="#">Privacy policy</a> |<a href="#">Disclaimer</a></p>
+           <p>*No win,no fee arrangement applies to personal injury cases only.
+		   Results may vary depending on your specific circumstances.</p>
+		  </div>
+		 </div>
+		</footer>
+	  </div>
+<script>
+const countdowmDateTime = document.getElementById('countdownDateTime');
+
+//update current time every second 
+function updateCurrentTime(){
+    const now = new Date();
+	const options = {
+	hour:'2-digit',
+	minute:'2-digit',
+	second:'2-digit',
+};
+
+  currentDateTime.textContent = now.toLocaleTimeString('en-US',options);
+}  
+  // Initial updates
+    updateCurrentTime();{
+}	
+    
+    // Set intervals
+    setInterval(updateCurrentTime, 1000);{
+}	  
+
+</script>
+
+</body>
+</html>   
